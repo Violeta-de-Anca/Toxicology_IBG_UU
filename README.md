@@ -157,3 +157,14 @@ Ak = \frac{Db_{\text{2}} - Db_{\text{1}}}{Time_{\text{2}} - Time_{\text{1}}}
 $$
 
 
+
+
+
+
+
+
+
+
+
+
+
