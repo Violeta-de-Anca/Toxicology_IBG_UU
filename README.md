@@ -29,6 +29,53 @@ Depending on way of administration they mixed the samples differently in the cuv
 The scientist mixed the sample and the different master mix (not relevant for the data analysis) and measured the absorbency of the samples, at 340 nm in an spectrophotometer. So the raw data we are going to get is absorvance values.
 
 #### Dry lab, data analysis
-Now that we have an idea of what was the experimental setup
+Now that we have an idea of what was the experimental setup let's start analyzing the data.
+
+##### Loading data
+Download the data from studium, then load the following modules:
+**To install for the first time R package the command is: install.packages("name_of_the_package")**
+
+**To load an R package the command is: library()**
+
+- data.table
+
+- tidyr
+
+- tidyselect
+
+- dplyr
+
+Now that we have all the packages installed and loaded, let's load our dataset which is in Studium but also in this GitHub:
+
+   `dataset = fread(input = "<your_path>/dataset_lab_3.csv",header=T)`
+
+
+##### Plasma ethanol concentration as a function of time
+
+Let’s start with plotting the plasma ethanol concentration as a function of time. We will need to use the Beer’s law:
+
+$$
+ΔA = \text{C} \times \text{l} \times \text{ε}
+$$
+
+$$  
+l = 1 cm
+$$
+
+$$
+ε = 6.22 mM/cm
+$$
+   
+   
+Where c is concentration, l is the cuvette length and ε is the absorptivity constant.
+
+**Think about the dilution factor**
+
+*(final volume/aliquote volume) * (final volume/aliquote volume)…**
+
+
+
+
+
 
 
