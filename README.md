@@ -146,8 +146,14 @@ plot(dataset.<subgroup>$body_burden~dataset.<subgroup>$time_elapsed,xlab="Time (
 
 ##### Initial absorption rate (AR) of ethanol
 
-With the slope from the body burden now we can calculate the rate of absorption. By mathematical properties we can
+With the slope from the body burden now we can calculate the rate of absorption. By mathematical properties we can know the speed by the plot just like this:
 
+![image](https://github.com/Violeta-de-Anca/Toxicology_IBG_UU/assets/101873673/62b2a6b9-ca1b-4d7b-9e92-10b337abe8a2)
 
+With the formula being:
+
+$$
+Ak = \frac{Db_{\text{1}} \times \text{Volume}}{C_{\text{ss}}}
+$$
 
 
