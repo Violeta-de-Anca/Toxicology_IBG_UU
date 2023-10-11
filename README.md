@@ -33,6 +33,7 @@ Now that we have an idea of what was the experimental setup let's start analyzin
 
 ##### Loading data
 Download the data from studium, then load the following modules:
+
 **To install for the first time R package the command is: install.packages("name_of_the_package")**
 
 **To load an R package the command is: library()**
