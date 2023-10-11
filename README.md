@@ -156,9 +156,14 @@ $$
 Ak = \frac{Db_{\text{2}} - Db_{\text{1}}}{Time_{\text{2}} - Time_{\text{1}}}
 $$
 
+```diff
+kA=(dataset.<subgroup>$body_burden[row_2]-dataset.<subgroup>$body_burden[row_1])/(Time_2-Time_1)
++ We need to express the rate in hours
+Ar=kA*<conversion to hours>
+```
 
-
-
+##### Elimination rate (ER) of ethanol
+Same concept as with the absorption rate
 
 
 
