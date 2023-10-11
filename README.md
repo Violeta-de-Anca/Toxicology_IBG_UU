@@ -153,7 +153,7 @@ With the slope from the body burden now we can calculate the rate of absorption.
 With the formula being:
 
 $$
-Ak = \frac{Db_{\text{1}} \times \text{Volume}}{C_{\text{ss}}}
+Ak = \frac{Db_{\text{2}} \times Db_{\text{1}}}{Time_{\text{1}} Time_{\text{1}}}
 $$
 
 
