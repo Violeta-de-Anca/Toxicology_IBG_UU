@@ -74,6 +74,24 @@ Where c is concentration, l is the cuvette length and ε is the absorptivity con
 
 *(final volume/aliquote volume) * (final volume/aliquote volume)…**
 
+Once you have the dilution factors we can apply beer's law to get the concentration:
+
+`dataset$concentration=(dataset$delta_A*<dilution_factor>)/(ε*l)`
+
+In order to have the two different dilution factors we can subset by row to overwrite:
+
+`dataset$concentration[<rows>]=(dataset$delta_A[<rows>]*<dilution_factor>)/(ε*l)`
+
+When we finally have the correct concentrations we can plot againts time to see the behaviour. 
+
+   `dataset.<subgroup>=dataset[dataset$type_intake=="<option between iv/ip/sc>"&dataset$4-MP=="<option between yes/no>",]`
+
+   `y=plot(dataset.<subgroup>$concentration~dataset.<subgroup>$time_elapsed,xlab="Time (min)",ylab="Concentration mM)",main="Plasma ethanol concentration in <subgroup>",ylim=c(<this change between methods of injection>))`
+
+In order to be able to compare here are the limits you need to put for each of the injection method:
+- For IV is c(0,10)
+- For IP is c(0,25)
+- For SC is c(0,25)
 
 
 
