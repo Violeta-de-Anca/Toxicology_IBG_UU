@@ -122,8 +122,20 @@ Careful, check again that the dilution factors you calculated apply for this one
 EtOH=(0.481*<dilution factor>)/(6.22*1)
 + Then we are going to calculate the volume that was administered in L
 vol_EtOH= (<volume of ethanol administered>*<transformation to L>)
+@@ Lastly let's calculate the volume of distribution @@
 volume_of_distribution.IV.4mp=((EtOH*vol_EtOH)/dataset.<group where we can find the Css>$concentration[<timepoint you think is correct>])/<mass of the rats>
 ```
+
+##### Body burden as a function of time
+
+The body burden of a substance is said to be the amount of the substance in the human body. With the volume of distribution we can calculate the body burden as a function of time.
+The body burden is calculated in mmol/kg, the formula is:
+
+$$
+Db = \text{Vd} \times \text{C}
+$$
+
+Where Db is body burden, Vd is the distribution of volume and the C is the concentration of ethanol each time we measured it.
 
 
 
