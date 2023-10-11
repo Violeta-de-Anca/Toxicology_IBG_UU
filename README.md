@@ -82,18 +82,48 @@ In order to have the two different dilution factors we can subset by row to over
 
 `dataset$concentration[<rows>]=(dataset$delta_A[<rows>]*<dilution_factor>)/(ε*l)`
 
-When we finally have the correct concentrations we can plot againts time to see the behaviour. 
+When we finally have the correct concentrations we can plot againts time to see the behaviour.
 
-   `dataset.<subgroup>=dataset[dataset$type_intake=="<option between iv/ip/sc>"&dataset$4-MP=="<option between yes/no>",]`
+```diff
++ This is to subset each group
+dataset.<subgroup>=dataset[dataset$type_intake=="<option between iv/ip/sc>"&dataset$`4-MP`=="<option between yes/no>",]
+```
 
-   `y=plot(dataset.<subgroup>$concentration~dataset.<subgroup>$time_elapsed,xlab="Time (min)",ylab="Concentration mM)",main="Plasma ethanol concentration in <subgroup>",ylim=c(<this change between methods of injection>))`
+```diff
++ This is to plot a graph concentration vs time
+y=plot(dataset.<subgroup>$concentration~dataset.<subgroup>$time_elapsed,xlab="Time (min)",ylab="Concentration mM)",main="Plasma ethanol concentration in <subgroup>",ylim=c(<this change between methods of injection>))
+```
 
 In order to be able to compare here are the limits you need to put for each of the injection method:
 - For IV is c(0,10)
 - For IP is c(0,25)
 - For SC is c(0,25)
 
+##### Volume of distribution ethanol
 
+Volume of distribution is the theoretical value to represent the total volume where the total amount of an administered compound can be found. Now that we have the concentration plots let’s focus on the second objective, calculating the distribution volume of ethanol in the rats.
+
+$$
+Vd = \frac{\text{Concentration} \times \text{Volume}}{C_{\text{ss}}}
+$$
+
+Concentration is the pure ethanol concentration, the Volume is of ethanol injected in the protocol (FYI it varies with the method) and Css is the concentration at steady state.
+
+One extra piece of information you need to have is the measurement in the spectrophotometer of pure ethanol:
+
+$$
+ΔA=0,481
+$$
+
+Careful, check again that the dilution factors you calculated apply for this one…
+
+```diff
+- First let's calculate the ethanol concentration that was administered
+EtOH=(0.481*<dilution factor>)/(6.22*1)
++ Then we are going to calculate the volume that was administered in L
+vol_EtOH= (<volume of ethanol administered>*<transformation to L>)
+volume_of_distribution.IV.4mp=((EtOH*vol_EtOH)/dataset.<group where we can find the Css>$concentration[<timepoint you think is correct>])/<mass of the rats>
+```
 
 
 
