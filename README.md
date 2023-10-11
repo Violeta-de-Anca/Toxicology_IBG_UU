@@ -118,12 +118,12 @@ $$
 Careful, check again that the dilution factors you calculated apply for this one…
 
 ```diff
-- First let's calculate the ethanol concentration that was administered
+- First let's calculate the ethanol concentration that was administered with beer's law
 EtOH=(0.481*<dilution factor>)/(6.22*1)
 + Then we are going to calculate the volume that was administered in L
 vol_EtOH= (<volume of ethanol administered>*<transformation to L>)
 @@ Lastly let's calculate the volume of distribution @@
-volume_of_distribution.IV.4mp=((EtOH*vol_EtOH)/dataset.<group where we can find the Css>$concentration[<timepoint you think is correct>])/<mass of the rats>
+volume_of_distribution.<subgroup>=((EtOH*vol_EtOH)/dataset.<group where we can find the Css>$concentration[<timepoint you think is correct>])/<mass of the rats>
 ```
 
 ##### Body burden as a function of time
@@ -136,6 +136,17 @@ Db = \text{Vd} \times \text{C}
 $$
 
 Where Db is body burden, Vd is the distribution of volume and the C is the concentration of ethanol each time we measured it.
+
+```diff
+! Let's create a new column with the body burden
+dataset.<subgroup>$body_burden=volume_of_distribution.<subgroup>*dataset.<subgroup>$concentration
++ Now we can make a plot of body burden vs time
+plot(dataset.<subgroup>$body_burden~dataset.<subgroup>$time_elapsed,xlab="Time (min)",ylab="Body burden (mmol/kg*bw)",main="Body burden as function of\ntime in rats with <method you chose>")
+```
+
+##### Initial absorption rate (AR) of ethanol
+
+With the slope from the body burden now we can calculate the rate of absorption. By mathematical properties we can
 
 
 
