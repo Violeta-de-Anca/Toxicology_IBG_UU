@@ -14,4 +14,5 @@ In order to install properly packages, you will also need to install RTools: htt
 
 Once we have everything downloaded, let's look at the terminal in RStudio!
 
-Once you opened RStudio 
+Once you opened RStudio you should see a promp like this:
+
