@@ -1,6 +1,6 @@
 ## Hello and welcome to a little introduction about R!
 
-This is not meant to be a big introduction to R, but jsut one were you see commands you will use in the next session.
+This is not meant to be a big introduction to R, but just one were you see commands you will use in the next session.
 If you have never used R please find here a link to download it: 
 https://www.dataquest.io/blog/installing-r-on-your-computer/ 
 
@@ -22,7 +22,17 @@ Now we need to open a script so we can save all the commands in case we need to 
 
 <img width="249" alt="image" src="https://github.com/Violeta-de-Anca/Toxicology_IBG_UU/assets/101873673/5ba90e9f-4c3f-4239-9589-8831a5e672b1">
 
-After
+After opening a script, we will need to set up the working directory:
+
+![image](https://github.com/Violeta-de-Anca/Toxicology_IBG_UU/assets/101873673/20e6e789-6ead-4e34-a734-7e04908bcd49)
+
+The working directory as to be where our dataset is.
+
+## Let's load the data
+Lot's of different files can be loaded into R, the most typical in Toxicology would be a .csv file, which is an excel file readable for R.
+
+There are multiple commands to read data, one way which does not consume much RAM is `fread()`, from the package 
+
 
 
 
