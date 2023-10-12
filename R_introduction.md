@@ -15,4 +15,18 @@ In order to install properly packages, you will also need to install RTools: htt
 Once we have everything downloaded, let's look at the terminal in RStudio!
 
 Once you opened RStudio you should see a promp like this:
+<img width="959" alt="image" src="https://github.com/Violeta-de-Anca/Toxicology_IBG_UU/assets/101873673/6be8c661-e90a-4944-8b86-6c4d0a0292cd">
+
+Now we need to open a script so we can save all the commands in case we need to repeat them:
+<img width="533" alt="image" src="https://github.com/Violeta-de-Anca/Toxicology_IBG_UU/assets/101873673/b568c1b7-316b-44fd-89c5-e8682af1ba71">
+
+<img width="249" alt="image" src="https://github.com/Violeta-de-Anca/Toxicology_IBG_UU/assets/101873673/5ba90e9f-4c3f-4239-9589-8831a5e672b1">
+
+After
+
+
+
+
+
+
 
