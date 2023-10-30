@@ -1,4 +1,4 @@
-# Third lab of toxicology
+# Lab 3 - Absorption rate as a function of site of injection
 Welcome to the Github page for the joined course of Toxicology from Uppsala University. In here you will have a guide for the third lab: absorption rate as a function of site of injection.
 ### Introduction
 The aim of this lab is to study how the way of administration influences the absorption rate of ethanol. We have data from a group of rats which where divided and study either intravenous (i.v.), intraperitoneal (i.p.) or subcutaneous (s.c.) administration. Some rats were given 4-MP (an inhibitor of ADH) and ethanol and others ethanol only.
