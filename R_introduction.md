@@ -31,7 +31,18 @@ The working directory as to be where our dataset is.
 ## Let's load the data
 Lot's of different files can be loaded into R, the most typical in Toxicology would be a .csv file, which is an excel file readable for R.
 
-There are multiple commands to read data, one way which does not consume much RAM is `fread()`, from the package data.table. Let's start by loading our dataset to see what is it.
+There are multiple commands to read data, one way which does not consume much RAM is `fread()`, from the package data.table. 
+First thing you want to do is to install and load the necesary packages in R. In order to do that there are two functions: 
+
+```diff
+install.packages("name of the package")
+library(name of the package)
+#In out case it would be:
+install.packages("data.table")
+library(data.table)
+```
+
+Let's start by loading our dataset to see what is it.
 
 ```diff
 dataset = fread(input = "dataset_lab_3.csv",header=T)
