@@ -42,10 +42,10 @@ install.packages("data.table")
 library(data.table)
 ```
 
-Let's start by loading our dataset to see what is it.
+Let's start by loading our example dataset to see what is it.
 
 ```diff
-dataset = fread(input = "dataset_lab_3.csv",header=T)
+dataset = fread(input = "example.csv",header=T)
 ```
 
 
