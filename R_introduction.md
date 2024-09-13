@@ -42,11 +42,34 @@ install.packages("data.table")
 library(data.table)
 ```
 
+Please remember to read the output when is installing the packages.
+Now install these packages: tidyr, tidyselect, dplyr, ggplot2, viridis, gplots, qqman, data.table, diffdf, useful, stringr.
+
+In R is important to specify where all the files that you are going to use are, for this let's define the working directory:
+
+```diff
+setwd("the path")
+```
+
+You can decide in which folder you have the have all the data and just control+shit+c and you will have now the path of the folder, paste it and change all the \ for /
+
+
 Let's start by loading our example dataset to see what is it.
 
 ```diff
-dataset = fread(input = "example.csv",header=T)
+dataset = fread(input = "dataset_for_first_session.csv",header=T)
 ```
+
+We see there are several columns, with different individuals and different treatments:
+![image](https://github.com/user-attachments/assets/43650fb9-9ff1-41be-b909-f8e887c7f9de)
+
+Let's subset the individual why their treatment:
+
+
+
+
+
+
 
 
 
