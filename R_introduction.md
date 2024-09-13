@@ -28,7 +28,7 @@ After opening a script, we will need to set up the working directory:
 
 The working directory as to be where our dataset is.
 
-## Let's load the data
+## Let's install all the packages
 Lot's of different files can be loaded into R, the most typical in Toxicology would be a .csv file, which is an excel file readable for R.
 
 There are multiple commands to read data, one way which does not consume much RAM is `fread()`, from the package data.table. 
@@ -45,15 +45,7 @@ library(data.table)
 Please remember to read the output when is installing the packages.
 Now install these packages: tidyr, tidyselect, dplyr, ggplot2, viridis, gplots, qqman, data.table, diffdf, useful, stringr.
 
-In R is important to specify where all the files that you are going to use are, for this let's define the working directory:
-
-```diff
-setwd("the path")
-```
-
-You can decide in which folder you have the have all the data and just control+shit+c and you will have now the path of the folder, paste it and change all the \ for /
-
-
+## Now we can start working on some dataset
 Let's start by loading our example dataset to see what is it.
 
 ```diff
@@ -65,7 +57,11 @@ We see there are several columns, with different individuals and different treat
 
 Let's subset the individual why their treatment:
 
+```diff
+subset=dataset[dataset$route_administered=="which ever type of treatment,]
+```
 
+You can play a little more with the data for the next session, please remember to do the pre-lab quizz, as it will give you the theoretical background necessary for understanding the data you are analyzing.
 
 
 
