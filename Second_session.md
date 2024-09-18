@@ -112,7 +112,7 @@ $$
 Vd = \frac{\text{Concentration} \times \text{Volume}}{C_{\text{ss}}}
 $$
 
-Concentration is the pure ethanol concentration, the Volume is of ethanol injected in the protocol (FYI it varies with the method) and Css is the concentration at steady state.
+Concentration is the pure ethanol concentration, the Volume is of ethanol injected in the protocol (FYI it varies with the method) and Css is the concentration at steady state (where there is no absorption nor elimination).
 
 One extra piece of information you need to have is the measurement in the spectrophotometer of pure ethanol:
 
