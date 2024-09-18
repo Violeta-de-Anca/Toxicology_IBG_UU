@@ -165,8 +165,7 @@ Ar=kA*<conversion to hours>
 ##### Elimination rate (ER) of ethanol
 Same concept as with the absorption rate, we can calculate the rate of elimination with the same formula and same code.
 
-
-
+## Please remember to answer the quiz in Studium!
 
 
 
