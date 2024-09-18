@@ -101,7 +101,12 @@ In order to be able to compare here are the limits you need to put for each of t
 
 ##### Volume of distribution ethanol
 
-Volume of distribution is the theoretical value to represent the total volume where the total amount of an administered compound can be found. Now that we have the concentration plots let’s focus on the second objective, calculating the distribution volume of ethanol in the rats.
+Volume of distribution is the theoretical value to represent the total volume where the total amount of an administered compound can be found. 
+
+![image](https://github.com/user-attachments/assets/5354ea7e-511a-4244-9d3b-9fd519d8567e)
+
+
+Now that we have the concentration plots let’s focus on the second objective, calculating the distribution volume of ethanol in the rats.
 
 $$
 Vd = \frac{\text{Concentration} \times \text{Volume}}{C_{\text{ss}}}
