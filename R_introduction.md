@@ -1,6 +1,8 @@
 ## Hello and welcome to a little introduction about R!
 
-This is not meant to be a big introduction to R, but just one were you see commands you will use in the next session.
+This is not meant to be a big introduction to R, but just one were you see commands you will use in the next session and playing a little bit around to familirize yourself with RStudio and the commands.
+
+In the seminar exclusively dedicated to R we have seen how to install everything properly, but if you were not able to attend find some instructions here:
 If you have never used R please find here a link to download it: 
 https://www.dataquest.io/blog/installing-r-on-your-computer/ 
 
@@ -45,6 +47,8 @@ library(data.table)
 Please remember to read the output when is installing the packages.
 Now install these packages: tidyr, tidyselect, dplyr, ggplot2, viridis, gplots, qqman, data.table, diffdf, useful, stringr.
 
+From here on is were it starts this first session!
+
 ## Now we can start working on some dataset
 Let's start by loading our example dataset to see what is it.
 
@@ -52,14 +56,48 @@ Let's start by loading our example dataset to see what is it.
 dataset = fread(input = "dataset_for_first_session.csv",header=T)
 ```
 
+Now as we human record the results, errors can be made. Note that one column is extrangely named. We as the data analyst take note of this and we need to correct it.
+
+```diff
+setnames(dataset, old = c("strange column name"),
+                 new = c("delta"))
+```
+
+Now it looks so much better and it makes sense!
+
 We see there are several columns, with different individuals and different treatments:
 ![image](https://github.com/user-attachments/assets/43650fb9-9ff1-41be-b909-f8e887c7f9de)
 
-Let's subset the individual why their treatment:
+As there are different routes of administration, let's see if we can have some basic statistics on each route:
 
 ```diff
-subset=dataset[dataset$route_administered=="which ever type of treatment,]
+summary(dataset)
+unique(dataset$route_administered)
+table(dataset$route_administered)
+range(dataset$time_elapsed)
 ```
+
+How many types of administration do we have? How many individuals are in each type of route? With these basic commands as a data analyst we can understand better the data.
+
+Let's subset the individuals by their treatment:
+
+```diff
+subset=dataset[dataset$route_administered=="which ever type of treatment",]
+```
+
+With this way if we want to only work with one part of a whole project it saves us headaches of mixing data by mistake.
+
+Also one basic thing we data analyst start doing as soon as we get our hands on some new data is to start exploring it by plotting.
+
+```diff
+ggplot(dataset, aes(x = time_passed, y = delta, color = route_administered)) +
+  geom_point() +
+  labs(x = "Time (min)", y = expression(Delta),
+       color = "Route", title = expression(paste(Delta, "A over time by route"))) +
+  theme_minimal()
+```
+Can you make sense of the plot? Do you think there might be a nicer way to present at first glance the data?
+
 
 You can play a little more with the data for the next session, please remember to do the pre-lab quizz, as it will give you the theoretical background necessary for understanding the data you are analyzing.
 
