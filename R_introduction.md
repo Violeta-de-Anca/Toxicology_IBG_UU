@@ -2,7 +2,8 @@
 
 This is not meant to be a big introduction to R, but just one were you see commands you will use in the next session and playing a little bit around to familirize yourself with RStudio and the commands.
 
-In the seminar exclusively dedicated to R we have seen how to install everything properly, but if you were not able to attend find some instructions here:
+***In the seminar exclusively dedicated to R we have seen how to install everything properly, but if you were not able to attend find some instructions here***
+
 If you have never used R please find here a link to download it: 
 https://www.dataquest.io/blog/installing-r-on-your-computer/ 
 
